@@ -41,14 +41,13 @@ const (
 
 // New ...
 func New(cache cacheType, maxEntries ...int) Cache {
-	// size := 0
-	// if len(maxEntries) > 0 {
-	// 	size = maxEntries[0]
-	// }
+	size := 0
+	if len(maxEntries) > 0 {
+		size = maxEntries[0]
+	}
 	switch cache {
 	case FIFO:
-		// return NewFIFO(size)
-		return nil
+		return NewFIFO(size)
 
 	case LRU:
 		// return NewLRU(size)
