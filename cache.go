@@ -50,8 +50,7 @@ func New(cache cacheType, maxEntries ...int) Cache {
 		return NewFIFO(size)
 
 	case LRU:
-		// return NewLRU(size)
-		return nil
+		return NewLRU(size)
 
 	case MRU:
 		// return NewMRU(size)
