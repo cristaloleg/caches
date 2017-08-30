@@ -53,8 +53,7 @@ func New(cache cacheType, maxEntries ...int) Cache {
 		return NewLRU(size)
 
 	case MRU:
-		// return NewMRU(size)
-		return nil
+		return NewMRU(size)
 
 	default:
 		return nil
